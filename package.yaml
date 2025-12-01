@@ -1,0 +1,33 @@
+name:                aoc2025
+version:             0.1.0.0
+github:              "jahaynes/ advent-of-code-2025"
+license:             BSD-3-Clause
+author:              "John Haynes"
+maintainer:          "john.andrew.haynes@gmail.com"
+copyright:           "2025 John Haynes"
+description:         Advent of code 2025
+
+dependencies:
+- base
+
+ghc-options:
+- -O2
+- -Wall
+- -Wcompat
+- -Widentities
+- -Wincomplete-record-updates
+- -Wincomplete-uni-patterns
+- -Wmissing-export-lists
+- -Wmissing-home-modules
+- -Wpartial-fields
+- -Wredundant-constraints
+
+library:
+  source-dirs: src/Common
+
+executables:
+
+  Day01:
+    main:           Main.hs
+    source-dirs:    src/Day01
+    dependencies:   aoc2025
