@@ -10,6 +10,9 @@ description:         Advent of code 2025
 dependencies:
 - base
 
+default-extensions:
+- MultiWayIf
+
 ghc-options:
 - -O2
 - -Wall
