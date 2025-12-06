@@ -10,12 +10,6 @@ description:         Advent of code 2025
 dependencies:
 - base
 
-default-extensions:
-- BangPatterns
-- MultiWayIf
-- ScopedTypeVariables
-- TupleSections
-
 ghc-options:
 - -O2
 - -Wall
@@ -30,40 +24,43 @@ ghc-options:
 
 library:
   source-dirs: src/Common
+  exposed-modules: Parser
 
 executables:
 
   Day01:
     main:           Main.hs
     source-dirs:    src/Day01
-    dependencies:   aoc2025
+    default-extensions:
+      - MultiWayIf
 
   Day02:
     main:           Main.hs
     source-dirs:    src/Day02
+    default-extensions:
+      - BangPatterns
+      - ScopedTypeVariables
     dependencies:
-      - aoc2025
       - containers
       - split
 
   Day03:
     main:           Main.hs
     source-dirs:    src/Day03
-    dependencies:
-      - aoc2025
+    default-extensions:
+      - ScopedTypeVariables
 
   Day04:
     main:           Main.hs
     source-dirs:    src/Day04
+    default-extensions:
+      - TupleSections
     dependencies:
-      - aoc2025
       - containers
 
   Day05:
       main:           Main.hs
       source-dirs:    src/Day05
-      dependencies:
-        - aoc2025
 
   Day06:
       main:           Main.hs
