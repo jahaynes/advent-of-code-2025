@@ -24,7 +24,9 @@ ghc-options:
 
 library:
   source-dirs: src/Common
-  exposed-modules: Parser
+  exposed-modules:
+    - Combinators
+    - Parser
 
 executables:
 
