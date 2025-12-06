@@ -14,7 +14,7 @@ data Item = Number !Int
 main :: IO ()
 main = do
 
-    input <- parse <$> readFile "./input_6"
+    input <- parse <$> readFile "./sample_6"
 
     print $ part1 input
 
@@ -45,6 +45,6 @@ itemLine = ws *> sepBy gap pItem <* pTakeWhile (== ' ')
 
     pItem :: Parser String Item
     pItem  =  Number <$> pPositive
-        <|> Op     <$> pOp
+          <|> Op     <$> pOp
         where
         pOp = item (\c -> c == '+' || c == '*')
