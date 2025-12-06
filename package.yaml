@@ -11,7 +11,9 @@ dependencies:
 - base
 
 default-extensions:
+- BangPatterns
 - MultiWayIf
+- ScopedTypeVariables
 
 ghc-options:
 - -O2
@@ -34,3 +36,11 @@ executables:
     main:           Main.hs
     source-dirs:    src/Day01
     dependencies:   aoc2025
+
+  Day02:
+    main:           Main.hs
+    source-dirs:    src/Day02
+    dependencies:
+      - aoc2025
+      - containers
+      - split
