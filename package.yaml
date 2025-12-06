@@ -58,3 +58,9 @@ executables:
     dependencies:
       - aoc2025
       - containers
+
+  Day05:
+      main:           Main.hs
+      source-dirs:    src/Day05
+      dependencies:
+        - aoc2025
