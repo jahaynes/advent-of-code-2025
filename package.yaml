@@ -14,6 +14,7 @@ default-extensions:
 - BangPatterns
 - MultiWayIf
 - ScopedTypeVariables
+- TupleSections
 
 ghc-options:
 - -O2
@@ -44,3 +45,9 @@ executables:
       - aoc2025
       - containers
       - split
+
+  Day03:
+    main:           Main.hs
+    source-dirs:    src/Day03
+    dependencies:
+      - aoc2025
