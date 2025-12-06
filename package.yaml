@@ -51,3 +51,10 @@ executables:
     source-dirs:    src/Day03
     dependencies:
       - aoc2025
+
+  Day04:
+    main:           Main.hs
+    source-dirs:    src/Day04
+    dependencies:
+      - aoc2025
+      - containers
