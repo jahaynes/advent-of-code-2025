@@ -24,6 +24,7 @@ library
   exposed-modules:
       Combinators
       Parser
+      State
       String
   other-modules:
       Paths_aoc2025
@@ -140,4 +141,5 @@ executable Day07
   build-depends:
       aoc2025
     , base
+    , containers
   default-language: Haskell2010

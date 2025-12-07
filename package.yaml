@@ -27,6 +27,7 @@ library:
   exposed-modules:
     - Combinators
     - Parser
+    - State
     - String
 
 executables:
@@ -76,3 +77,4 @@ executables:
       source-dirs:    src/Day07
       dependencies:
         - aoc2025
+        - containers
