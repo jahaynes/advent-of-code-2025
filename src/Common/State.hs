@@ -14,11 +14,15 @@ instance Applicative (State s) where
   pure a = State $ \s -> (s, a)
 
   State sf <*> State sx = State $ \s ->
-    let (s', f) = undefined
-    in undefined
+    let (s',  f) = sf s
+        (s'', x) = sx s'
+    in (s'', f x)
 
 instance Monad (State s) where
 
   return = pure
 
-  sx >>= sf = State undefined
+  State sx >>= sf = State $ \s ->
+    let (s', x) = sx s
+        State f = sf x in
+    f s'
