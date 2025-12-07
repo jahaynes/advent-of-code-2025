@@ -23,9 +23,20 @@ instance Show Manifold where
 main :: IO ()
 main = do
     manifold0 <- parse <$> readFile "./sample_7"
-    print $ step manifold0
-    let final = whileChanged step manifold0
-    print $ countSplits final
+    -- let final = whileChanged step manifold0
+    -- print $ countSplits final
+
+    print $ asTree manifold0
+
+
+asTree :: Manifold -> Tree
+asTree = undefined
+
+data Tree = -- 0 or 1 or 2 children?
+    Tree
+        deriving Show
+
+
 
 whileChanged :: Eq a => (a -> a) -> a -> a
 whileChanged f x
