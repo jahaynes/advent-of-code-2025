@@ -24,22 +24,19 @@ main :: IO ()
 main = do
     manifold0 <- parse <$> readFile "./sample_7"
     print $ step manifold0
-    
     let final = whileChanged step manifold0
-
     print $ countSplits final
-
 
 whileChanged :: Eq a => (a -> a) -> a -> a
 whileChanged f x
     | x == y = x
     | otherwise = whileChanged f y
-        where y = f x 
+        where y = f x
 
 countSplits :: Manifold -> Int
 countSplits (Manifold man) = sum
                            . map snd
-                           . M.toList 
+                           . M.toList
                            . M.mapWithKey count'
                            $ man
     where
